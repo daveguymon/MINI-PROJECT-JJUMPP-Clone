@@ -2,7 +2,11 @@
   "name": "jjumpp-assignment",
   "version": "0.1.0",
   "private": true,
+  "main": "server/server.js",
   "dependencies": {
+    "express": "^4.15.4",
+    "passport": "^0.4.0",
+    "passport-facebook": "^2.1.1",
     "react": "^15.6.1",
     "react-dom": "^15.6.1",
     "react-redux": "^5.0.6",
