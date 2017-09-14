@@ -38,8 +38,8 @@ class Graph extends Component {
             <div className="loggedInStacksIcon"></div>
           </Link>
           <div className="navigation">
-            <p className="headerLink"><Link to="About">ABOUT</Link></p>
-            <p className="headerLink"><Link to="Graph" style={this.props.location.pathname == "/Graph" ? currPage : null}>GRAPH</Link></p>
+            <p className="headerLink"><Link to="/about">ABOUT</Link></p>
+            <p className="headerLink"><Link to="/graph" style={this.props.location.pathname == "/graph" ? currPage : null}>GRAPH</Link></p>
             <p className="headerLink"><a href="#">FEATURES</a></p>
             <p className="headerLink"><a href="#">PRICING</a></p>
             <p className="headerLink"><a href="#">BLOG</a></p>

@@ -30,8 +30,8 @@ class LoggedInHome extends Component {
           <div className="loggedInStacksIcon"></div>
         </Link>
           <div className="navigation">
-            <p className="headerLink"><Link to="About">ABOUT</Link></p>
-            <p className="headerLink"><Link to="Graph">GRAPH</Link></p>
+            <p className="headerLink"><Link to="/about">ABOUT</Link></p>
+            <p className="headerLink"><Link to="/graph">GRAPH</Link></p>
             <p className="headerLink"><a href="#">FEATURES</a></p>
             <p className="headerLink"><a href="#">PRICING</a></p>
             <p className="headerLink"><a href="#">BLOG</a></p>
