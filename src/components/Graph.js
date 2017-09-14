@@ -75,8 +75,9 @@ class Graph extends Component {
 
 function mapStateToProps(state){
   return {
+    name: state.userName,
     chartData: state.chartData
   }
 }
 
-export default connect(mapStateToProps)(Graph);
+export default connect(mapStateToProps, {getUser})(Graph);
