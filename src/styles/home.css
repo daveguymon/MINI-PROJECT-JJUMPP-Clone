@@ -100,6 +100,7 @@
 
 .loginUser {
   justify-content: flex-start;
+  padding-left: 23px;
 }
 
 .loggedInUser {
@@ -169,7 +170,7 @@
 }
 
 .teamBios {
-  width: 95%;
+  width: 98%;
   min-height: 70vh;
   display: flex;
   justify-content: space-between;
