@@ -15,7 +15,7 @@ export default class Header extends Component{
       this.setState({
         name: res.data.displayName
       })
-    })
+    }).catch(err => console.log(err))
   }
 
   render(){

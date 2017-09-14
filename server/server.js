@@ -14,6 +14,7 @@ passport.use(new FacebookStrategy({
   callbackURL: "http://localhost:3030/auth/facebook/callback"
 },
 function(accessToken, refreshToken, profile, cb) {
+  console.log("Access Token is: ", accessToken)
   return cb(null, profile);
 }));
 
@@ -46,7 +47,8 @@ app.use(passport.session());
 
 // Define routes.
 app.get('/auth/facebook',
-  passport.authenticate('facebook'));
+  passport.authenticate('facebook', { authType: 'rerequest', scope: ['user_friends', 'manage_pages']})
+);
 
 app.get('/auth/facebook/callback',
   passport.authenticate('facebook', { failureRedirect: '/login' }),
