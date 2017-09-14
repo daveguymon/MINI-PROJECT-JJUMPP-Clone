@@ -6,9 +6,10 @@ import About from './About';
 import axios from 'axios';
 import {getUser} from './../ducks/reducer';
 import {connect} from 'react-redux';
+import {Bar} from 'react-chartjs-2';
 
 
-export default class Graph extends Component {
+class Graph extends Component {
 
   componentDidMount(){
     console.log(this.props.location.pathname);
@@ -49,7 +50,33 @@ export default class Graph extends Component {
           </div>
         </section>
 
+        <section className="barChart">
+        <Bar
+        	data={this.props.chartData}
+          width={100}
+          height={40}
+        	options={{
+
+            title: {
+              display: true,
+              text: 'Logged-In User Facebook Data',
+              fontSize: 25
+            },
+            legend: {
+              display: false
+            }
+        	}}
+        />
+        </section>
       </main>
     )
   }
 }
+
+function mapStateToProps(state){
+  return {
+    chartData: state.chartData
+  }
+}
+
+export default connect(mapStateToProps)(Graph);
