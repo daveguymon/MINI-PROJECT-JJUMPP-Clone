@@ -24,10 +24,10 @@ class Home extends Component {
       <main className="home">
         <section className="homeHeader">
           <div className="socialIcons">
-            <i className="fa fa-facebook-square" aria-hidden="true"></i>
-            <i className="fa fa-twitter" aria-hidden="true"></i>
-            <i className="fa fa-instagram" aria-hidden="true"></i>
-            <i className="fa fa-linkedin-square" aria-hidden="true"></i>
+            <a href="https://www.facebook.com/jjumppsoftware/" target="__blank"><i className="fa fa-facebook-square" aria-hidden="true"></i></a>
+            <a href="https://twitter.com/jjumppsoftware?lang=en" target="__blank"><i className="fa fa-twitter" aria-hidden="true"></i></a>
+            <a href="http://www.thepicta.com/user/jjumppsoftware/4511913634" target="__blank"><i className="fa fa-instagram" aria-hidden="true"></i></a>
+            <a href="https://www.linkedin.com/company/18141167/" target="__blank"><i className="fa fa-linkedin-square" aria-hidden="true"></i></a>
           </div>
           <div className="stacksIcon"></div>
           <div className="loginUser">
