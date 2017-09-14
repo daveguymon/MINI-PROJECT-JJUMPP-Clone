@@ -1,4 +1,5 @@
 import React, {Component} from 'react';
+import './../styles/header.css';
 import axios from 'axios';
 
 export default class Header extends Component{
@@ -20,7 +21,7 @@ export default class Header extends Component{
 
   render(){
     return (
-      <main>
+      <main className="header">
         <h1>HEADER COMPONENT</h1>
         <a href="http://localhost:3030/login/facebook"><p>LOG IN</p></a>
         <p>Hello, {this.state.name}</p>
