@@ -39,8 +39,17 @@
 }
 
 .loggedInStacksIcon {
+  width: 100%;
   margin: 0;
   background-position: center;
+}
+
+ .logoLink {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 20%;
+  height: 100px;
 }
 
 .navigation {

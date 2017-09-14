@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
 import './../styles/home.css';
 import {Link} from 'react-router-dom';
-import APIChart from './APIChart';
+import Graph from './Graph';
 import axios from 'axios';
 import {getUser} from './../ducks/reducer';
 import {connect} from 'react-redux';
@@ -29,13 +29,17 @@ class About extends Component {
 
   render(){
 
+    const currPage = {color: "#00A8FF"}
+
     return (
       <main className="about">
         <section className="loggedInHomeHeader">
+        <Link to="/home" className="logoLink">
           <div className="loggedInStacksIcon"></div>
+        </Link>
           <div className="navigation">
-            <p className="headerLink"><Link to="About">ABOUT</Link></p>
-            <p className="headerLink"><Link to="APIChart">GRAPH</Link></p>
+            <p className="headerLink"><Link to="About" style={this.props.location.pathname == "/About" ? currPage : null}>ABOUT</Link></p>
+            <p className="headerLink"><Link to="Graph">GRAPH</Link></p>
             <p className="headerLink"><a href="#">FEATURES</a></p>
             <p className="headerLink"><a href="#">PRICING</a></p>
             <p className="headerLink"><a href="#">BLOG</a></p>
