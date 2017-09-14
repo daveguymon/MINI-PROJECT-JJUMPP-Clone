@@ -12,8 +12,6 @@ export default function reducer(state=initialState, action) {
     default:
       return state;
   }
-
-
 }
 
 export function getUser(name){

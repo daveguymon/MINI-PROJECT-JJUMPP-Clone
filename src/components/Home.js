@@ -10,11 +10,16 @@ class Home extends Component {
   componentDidMount(){
     axios.get('/me').then(res => {
       console.log(res.data)
-      this.props.getUser(res.data.displayName)
+      return res.data.displayName;
     }).catch(err => console.log(err))
   }
 
   render(){
+
+    const loggedIn = {display: "none"}
+    const loggedOut = {display: "none"}
+
+
     return (
       <main className="home">
         <section className="homeHeader">
@@ -26,7 +31,9 @@ class Home extends Component {
           </div>
           <div className="stacksIcon"></div>
           <div className="loginUser">
-          <a href="http://localhost:3030/login/facebook"><p>LOG IN</p></a>
+          <a href="http://localhost:3030/login/facebook" style={this.props.name ? loggedIn : null}>
+          <p>LOG IN</p></a>
+          <p style={this.props.name ? null : loggedOut}>Hello, {this.props.name}.</p>
           </div>
         </section>
         <section className="homeBody">
@@ -35,7 +42,6 @@ class Home extends Component {
             <p>EXPLORE THE SPRINGBOARD</p>
           </div>
         </section>
-        <h1>{this.props.name}</h1>
       </main>
     )
   }

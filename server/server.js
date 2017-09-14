@@ -55,7 +55,7 @@ app.get('/auth/facebook/callback',
   function(req, res) {
     console.log(req.user)
     // Successful authentication, redirect home.
-    res.redirect('http://localhost:3000/');
+    res.redirect('http://localhost:3000/home');
   });
 
 app.get('/me',
